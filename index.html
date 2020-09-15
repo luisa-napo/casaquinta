@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DUEÑO VENDE Casaquinta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.css">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="parallax pb-5" style="background-image: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('img/102.jpg'); min-height: 100vh; height: auto;position: relative"">
+        <div class="container" style="height: 100%;">
+            <div class="d-flex flex-column justify-content-between py-5" style="height: 100%">
+                <div><div style="width: 60px; height: 60px; background: white; border-radius: 50%"></div></div>
+                <div class="row align-items-center flex-column text-center">
+                    <div class="letrero-rojo mb-4 animate__animated animate__fadeInDown animate__slow">DUEÑO VENDE</div>
+                    <h1 class="text-white animate__animated animate__fadeInUp animate__slow">Casa de Campo <span class="text-contrast">Abasto</span></h1>
+                    <p class="text-white text-25 text-weight-300 animate__animated animate__fadeIn animate__slow">Casaquinta / Casa de campo, en Abasto, LA PLATA</p>
+                </div>
+                <div class="text-contrast text-center animate__animated animate__bounce animate__infinite animate__slower" onclick="scrollToDiv('#caracteristicas',500)" style="font-size: 50px; cursor: pointer"><p><i class="fas fa-chevron-circle-down"></i></p></div>
+            </div>
+        </div>
+        <img class="animate__animated animate__rotateIn animate__slow" src="img/insignia.png" alt="insignia" width="300px" style="position: absolute; bottom: -150px; right: 100px">
+    </div>
+    <div id="caracteristicas" style="padding-top: 150px; padding-bottom: 100px">
+        <div class="container text-center">
+            <p class="text-contrast text-25 mb-0">* Zona Semirural *</p>
+            <p class="text-25 mb-0">Ruta 2 Km 55 / A Estrenar 3,6 Ha (36.000 m2)</p>
+            <p class="text-25 text-weight-300 mb-0">(Venta por radicación en el extranjero)</p>
+            <div class="row mt-5">
+                <div class="col col-12 col-md-6 col-lg-4 p-1">
+                    <div class="d-flex flex-column justify-content-center custom-card py-4">
+                        <p><img src="img/icons/1window.svg" alt="" width="100px"></p>
+                        <p class="mb-0"><strong>Ventanas doble vidrio</strong></p>
+                        <p>en Aluminio Monaco. (DVH), todas con mosquitero.</p>
+                    </div>
+                </div>
+                <div class="col col-12 col-md-6 col-lg-4 p-1">
+                    <div class="d-flex flex-column justify-content-center custom-card py-4">
+                        <p><img src="img/icons/2kitchen-furniture.svg" alt="" width="100px"></p>
+                        <p class="mb-0"><strong>Cocina grande, con isla</strong></p>
+                        <p>Mármoles y terminaciones de Primera Calidad.</p>
+                    </div>
+                </div>
+                <div class="col col-12 col-md-6 col-lg-4 p-1">
+                    <div class="d-flex flex-column justi fy-content-center custom-card py-4">
+                        <p><img src="img/icons/3dining-room-furniture.svg" alt="" width="100px"></p>
+                        <p class="mb-0"><strong>Living comedor grande</strong></p>
+                    </div>
+                </div>
+                <div class="col col-12 col-md-6 col-lg-4 p-1">
+                    <div class="d-flex flex-column justify-content-center custom-card py-4">
+                        <p><img src="img/icons/4living.svg" alt="" width="100px"></p>
+                        <p class="mb-0"><strong>ESCRITORIO o PLAY ROOM</strong></p>
+                        <p>en 2do piso, con ventanas a los 4 lados.</p>
+                    </div>
+                </div>
+                <div class="col col-12 col-md-6 col-lg-4 p-1">
+                    <div class="d-flex flex-column justify-content-center custom-card py-4">
+                        <p><img src="img/icons/5bedroom-furniture-equipment.svg" alt="" width="100px"></p>
+                        <p class="mb-0"><strong>Habitación Principal grande</strong></p>
+                        <p>con baño en Suite, con Hidromasaje grande y ducha. Vestidor muy amplio</p>
+                    </div>
+                </div>
+                <div class="col col-12 col-md-6 col-lg-4 p-1">
+                    <div class="d-flex flex-column justify-content-center custom-card py-4">
+                        <p><img src="img/icons/beds-svgrepo-com.svg" alt="" width="100px"></p>
+                        <p class="mb-0"><strong>Habitación 2</strong></p>
+                        <p>con 5 camas y 3 ventanas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background: #F1F1F1; padding: 100px 0 0 0;" id="lista-mas-caracteristicas-container" class="collapsed">
+        <div class="container">
+            <div class="row collapsed" id="lista-mas-caracteristicas">
+            </div>
+        </div>
+    </div>
+    <div style="background: #F1F1F1;" class="d-flex justify-content-center py-5"><a href="javascript:void(0)" onclick="showMore()">Ver más <i class="fas fa-angle-down"></i></a></div>
+    <div style="height: 500px">
+
+    </div>
+
+
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        function scrollToDiv(divId, time = 2000){
+            $('html, body').animate({
+                scrollTop: $(divId).offset().top
+            }, time);
+        }
+
+        var caracteristicas = [
+            "En 2 lotes de 75 mts ancho x 240 mts largo c/u. (total: 150 frente x 240 mts largo). 3,6 Hectáreas.",
+            "Rejas reforzadas en todas las puertas y ventanas.",
+            "EXCELENTE Construcción y Terminaciones. De PRIMERA calidad.",
+            "Techos con aislantes de fibra de vidrio y térmicos, dependiendo del lugar.",
+            "A SOLO 300 mts del ASFALTO (Estancia Chica) con entrada mejorada de piedra, y 1.000 mts de Estación Abasto.",
+            "Aproximadamente 750 mts lineales de alambrado olímpico perimetral de excelente calidad, con mallado de calibre 12. Excelente calidad e instalación.",
+            "340 mts2 cubiertos. 95 mts2 semicubiertos.",
+            "2 Portones corredizos con control remoto, portero visor, y paredón iluminado por dentro y por fuera. Tercer portón corredizo en Galpón.",
+            "Pintada íntegramente por dentro y por fuera.",
+            "Electricidad y sistema eléctrico de Primera Calidad. Con disyuntores y térmicas independientes para cada sector de la casa.",
+            "3 lineas de energía eléctrica.",
+            "GARAJE/GALPON de 14,70 mts de largo por 6,50 mts de ancho, con techo aislante calor/frio/ruido. Apto también para salón de juegos o similar. Con equipo de aire frio calor de 6.000 frigorías.",
+            "6 equipos de aire FRIO/CALOR BGH nuevos. Son 3 de 3.000 frigorias, y 2 de 6.000 frigorias.",
+            "Patio trasero / Quincho, con parrilla, y 2 termotanques (eléctrico y a gas, de alta recuperación ).",
+            "Tanque de gas envasado, tamaño mediano.",
+            "CONTAINER grande. Tamaño Boing de 40 pies. Acondicionado como galpon, con división interna. Enb estado impecable, techado.",
+            "Bomba de Agua sumergible a 60 mts aproximadamente, marca Motorarg. (Agua Semi-mineral). Presurizadora.",
+            "2 Tanques de Agua de 1.100 litros cada uno de ellos. Total: 2.200 lts.",
+            "Sistema de Alarma con sensores en toda la casa. Circuito cerrado de Cámaras. (falta instalación de las cámaras).",
+            "Excelente Iluminación perimetral, con postes de alumbrado alrededor de la casa.",
+        ]
+
+        $(function (){
+            console.log('dehjidhie')
+            for (let i = 0; i<caracteristicas.length; i++){
+                $("#lista-mas-caracteristicas").append(`
+                <div class="col-12 col-md-6 text-justify">
+                    <p><span class="text-contrast">*</span> ${caracteristicas[i]}</p>
+                    </div>`)
+            }
+        })
+
+        function showMore(){
+            $("#lista-mas-caracteristicas-container").toggleClass("collapsed")
+        }
+    </script>
+</body>
+</html>
