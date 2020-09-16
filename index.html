@@ -12,6 +12,7 @@
     -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="plugins/lightgallery/dist/css/lightgallery.min.css">
     <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -19,19 +20,19 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="parallax pb-5" style="background-image: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('img/102.jpg'); min-height: 100vh; height: auto;position: relative"">
+    <div class="parallax pb-5" style="background-image: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('img/102.jpg'); min-height: 100vh; height: auto;position: relative">
         <div class="container" style="height: 100%;">
-            <div class="d-flex flex-column justify-content-between py-5" style="height: 100%">
-                <div><div style="width: 60px; height: 60px; background: white; border-radius: 50%"></div></div>
+            <div class="d-flex flex-column justify-content-between py-5" style="height: 100vh">
+                <div><img src="img/logo-cir.png" alt="" width="80px"></div>
                 <div class="row align-items-center flex-column text-center">
-                    <div class="letrero-rojo mb-4 animate__animated animate__fadeInDown animate__slow">DUEÑO VENDE</div>
+                    <div class="letrero-rojo mb-4 animate__animated animate__fadeInDown animate__slow mt-5">DUEÑO VENDE</div>
                     <h1 class="text-white animate__animated animate__fadeInUp animate__slow">Casa de Campo <span class="text-contrast">Abasto</span></h1>
                     <p class="text-white text-25 text-weight-300 animate__animated animate__fadeIn animate__slow">Casaquinta / Casa de campo, en Abasto, LA PLATA</p>
                 </div>
                 <div class="text-contrast text-center animate__animated animate__bounce animate__infinite animate__slower" onclick="scrollToDiv('#caracteristicas',500)" style="font-size: 50px; cursor: pointer"><p><i class="fas fa-chevron-circle-down"></i></p></div>
             </div>
         </div>
-        <img class="animate__animated animate__rotateIn animate__slow" src="img/insignia.png" alt="insignia" width="300px" style="position: absolute; bottom: -150px; right: 100px">
+        <img class="animate__animated animate__rotateIn animate__slow d-none d-sm-block" src="img/insignia.png" alt="insignia" width="300px" style="position: absolute; bottom: -150px; right: 100px">
     </div>
     <div id="caracteristicas" style="padding-top: 150px; padding-bottom: 100px">
         <div class="container text-center">
@@ -85,13 +86,33 @@
     </div>
     <div style="background: #F1F1F1; padding: 100px 0 0 0;" id="lista-mas-caracteristicas-container" class="collapsed">
         <div class="container">
-            <div class="row collapsed" id="lista-mas-caracteristicas">
+            <div class="row" id="lista-mas-caracteristicas">
             </div>
         </div>
     </div>
-    <div style="background: #F1F1F1;" class="d-flex justify-content-center py-5"><a href="javascript:void(0)" onclick="showMore()">Ver más <i class="fas fa-angle-down"></i></a></div>
-    <div style="height: 500px">
-
+    <div style="background: #F1F1F1;" class="d-flex justify-content-center py-5"><a href="javascript:void(0)" onclick="showMore('#lista-mas-caracteristicas-container', this)">Ver más <i class="fas fa-angle-down"></i></a></div>
+    <div style="padding: 100px 0 0 0;">
+        <div class="container">
+            <div id="lightgallery" class="row collapsed">
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center py-5"><a href="javascript:void(0)" onclick="showMore('#lightgallery', this)">Ver más <i class="fas fa-angle-down"></i></a></div>
+    <div style="background: #F1F1F1;">
+        <div class="p-0 p-md-3">
+            <iframe src="casaquinta.pdf" width="100%" height="500px"></iframe>
+        </div>
+    </div>
+    <div style="background-image: url('img/footer-pattern.png'), linear-gradient(to right, #3E3E3E, #3E3E3E)">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="height: 300px">
+                <img class="mb-3" src="img/logo-rec.png" alt="" width="100px">
+                <h2 class="text-contrast text-center"><strong>Para más información:</strong></h2>
+                <div style="border-bottom: 2px solid #93D801; width: 200px; margin: 10px 0;"></div>
+                <p class="text-white mb-0"><i class="fas fa-envelope text-contrast"></i> campoabasto2000@gmail.com</p>
+                <p class="text-white"><i class="fas fa-phone text-contrast"></i> +54 9 11 2687 8846</p>
+            </div>
+        </div>
     </div>
 
 
@@ -100,6 +121,8 @@
     <!--
     <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
     -->
+    <script src="plugins/lightgallery/dist/js/lightgallery.min.js"></script>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     <script>
@@ -130,20 +153,34 @@
             "2 Tanques de Agua de 1.100 litros cada uno de ellos. Total: 2.200 lts.",
             "Sistema de Alarma con sensores en toda la casa. Circuito cerrado de Cámaras. (falta instalación de las cámaras).",
             "Excelente Iluminación perimetral, con postes de alumbrado alrededor de la casa.",
-        ]
+        ];
 
         $(function (){
-            console.log('dehjidhie')
             for (let i = 0; i<caracteristicas.length; i++){
                 $("#lista-mas-caracteristicas").append(`
                 <div class="col-12 col-md-6 text-justify">
                     <p><span class="text-contrast">*</span> ${caracteristicas[i]}</p>
                     </div>`)
             }
-        })
 
-        function showMore(){
-            $("#lista-mas-caracteristicas-container").toggleClass("collapsed")
+            for (let i = 101; i<=137; i++){
+                $("#lightgallery").append(`
+
+                <div class="col col-12 col-md-6 col-lg-4 col-xl-3 p-1" data-src="img/${i}.jpg" style="cursor: pointer">
+                    <img src="img/${i}.jpg" alt="" width="100%" height="200px" style="object-fit: cover">
+                   </div>`)
+            }
+
+            lightGallery(document.getElementById('lightgallery'));
+        });
+
+        function showMore(selector, button){
+            $(selector).toggleClass("collapsed");
+            if($(selector).hasClass("collapsed")){
+                $(button).html(`Ver más <i class="fas fa-angle-down"></i>`)
+            }else{
+                $(button).html(`Ver menos <i class="fas fa-angle-up"></i>`)
+            }
         }
     </script>
 </body>
